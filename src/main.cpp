@@ -44,6 +44,8 @@ vector<double> read_array()
 		a.push_back(el);
 
 	cin.clear();
+	cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
 
 	return a;
 }
@@ -147,7 +149,6 @@ void assess_fit(int& it, double& max_it)
 	else 
 		display_message("The best fit is found within the given tolerance");
 }
-
 
 
 int main()
