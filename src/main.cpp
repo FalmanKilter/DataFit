@@ -46,7 +46,6 @@ vector<double> read_array()
 	cin.clear();
 	cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
-
 	return a;
 }
 
@@ -150,9 +149,24 @@ void assess_fit(int& it, double& max_it)
 		display_message("The best fit is found within the given tolerance");
 }
 
+// displays info about the program
+void display_info()
+{
+	display_message("*****************************************************************************************************");
+	display_message("the program takes in two vectors of data - X and y - that make up points on a 2D plane,");
+	display_message("and returns coefficients for the chosen fit law - linear or non - linear(quadratic, cubic, etc)");
+	insert_line();
+	display_message("the coefficients are determined using gradient descent method to minimize MSE of the predicted output.");
+	insert_line();
+	display_message("terminate vector input with a semicolon ';'! single values can be entered as usual");
+	display_message("*****************************************************************************************************");
+	insert_line();
+}
 
 int main()
 {
+	display_info();
+
 	//================================================ READ FIT PARAMETERS ================================================//
 
 	// read vector X from console
